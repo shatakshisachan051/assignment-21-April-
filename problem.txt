@@ -1,0 +1,64 @@
+Build a React application that displays a paginated list of books fetched from a public API. The app should allow users to search for books by title using Binary Search logic and support both local (useState) and global (Redux Toolkit) state management. Implement client-side pagination, routing, and use useRef, useEffect, and Context API where appropriate.
+
+🚧 Functional Requirements
+1. Project Setup
+Use Vite to scaffold the project.
+Use React with JSX and modern component structure.
+Install necessary packages:
+react-redux, @reduxjs/toolkit
+axios, react-router-dom
+2. Routing Structure
+Use React Router to define routes:
+/ → Home page (Book list with search + pagination)
+/book/:id → Book details page
+3. Home Page Features (/)
+Fetch books from a public book API (e.g., Open Library)
+Display books in a paginated format (10 per page).
+Add a search input to filter books by title.
+Implement a Binary Search (assume data is sorted by title).
+Use useRef to manage search input without re-render on every keypress.
+Highlight the matched book if found, and scroll to its card.
+4. Book Details Page (/book/:id)
+Use route params to fetch and display detailed book info (title, author, description).
+Use useEffect for API fetch and loading state with useState.
+5. Redux Toolkit for Global State
+Create a bookSlice with:
+books: list of books fetched
+selectedBook: current book in focus
+loading and error states
+Use redux-thunk or async middleware for API calls (with createAsyncThunk).
+6. Pagination Logic
+Show page numbers and next/previous buttons.
+On page change:
+Fetch the next set of books if applicable, or paginate from local data.
+Store current page number using useState.
+7. useRef Usage
+Use useRef to:
+Manage search input
+Scroll to a book card when a match is found via Binary Search
+8. Theme Toggle (Bonus, via Context API)
+Implement a light/dark mode using React Context API.
+Store theme state in context, and toggle via a button in the navbar.
+9. Component Breakdown
+<Navbar /> – Contains theme toggle
+<BookList /> – Displays all books for current page
+<BookCard /> – Individual book card
+<Pagination /> – Handles page navigation
+<SearchBar /> – Search functionality using useRef + Binary Search
+<BookDetails /> – Shows book info on /book/:id
+🧠 Technical Expectations
+State Management: useState, useEffect, Redux Toolkit, Context API
+Data Fetching: axios + async thunk
+Performance: Avoid unnecessary re-renders with useRef
+Logic: Binary Search for finding books
+Routing: react-router-dom
+Pagination: Manual logic, no libraries
+Design: Simple and clean layout
+
+
+urls - https://openlibrary.org/search.json?q=the+lord+of+the+rings
+     -https://openlibrary.org/search.json?q=the+lord+of+the+rings
+    -https://openlibrary.org/search.json?title=the+lord+of+the+rings
+    -https://openlibrary.org/search.json?author=tolkien&sort=new
+    -https://openlibrary.org/search.json?q=the+lord+of+the+rings&page=2
+    -https://openlibrary.org/search/authors.json?q=twain
