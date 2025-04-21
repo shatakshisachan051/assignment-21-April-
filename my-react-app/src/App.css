@@ -68,3 +68,65 @@ input{
   height: 400px;
 }
 
+.book-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.book-content {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.back-button {
+  background-color: #4a4a4a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #5a5a5a;
+}
+
+.description, .authors, .subjects {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.description h2, .authors h2, .subjects h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.description p {
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.authors ul, .subjects ul {
+  list-style: none;
+  padding: 0;
+}
+
+.authors li, .subjects li {
+  margin: 5px 0;
+  color: #ddd;
+}
+
+.loading, .error, .not-found {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
