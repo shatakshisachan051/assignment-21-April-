@@ -1,3 +1,8 @@
+body{
+  background-color: #242424;
+  color: white;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -15,11 +20,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #f7f7f7;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #dedede;
 }
 
 body {
