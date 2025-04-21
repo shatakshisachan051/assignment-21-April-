@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const BookCard = ({ book }) => {
+    if(!book) return null;
   return (
     <div className="book-card">
       <Link to={`/book/${book.key}`} className="book-link">

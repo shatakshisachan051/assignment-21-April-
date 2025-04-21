@@ -1,7 +1,7 @@
 import { Provider } from "react-redux";
 import "./App.css";
 import { ThemeProvider } from "./context/ThemeContext";
-import {BrowserRouter as Route, Router, Routes } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import BookList from "./components/BookList";
 import BookDetails from "./components/BookDetails";
