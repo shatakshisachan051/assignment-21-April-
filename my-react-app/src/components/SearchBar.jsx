@@ -6,13 +6,13 @@ import { Form } from "react-router-dom";
 
 
 const SearchBar=()=>{
-    const [seachTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
     const searchInputRef = useRef(null)
     const dispatch = useDispatch();
 
     const handleSearch=(e)=>{
         e.preventDefault();
-        dispatch(fetchBooks({query: seachTerm, page:1}));
+        dispatch(fetchBooks({query: searchTerm, page:1}));
     }
 
     const binarySearch = (books,target)=>{
@@ -23,7 +23,7 @@ const SearchBar=()=>{
             const bookTitle = books[mid].title.toLowerCase()
             const searchTarget = target.toLowerCase()
 
-            if(bookTitle= searchTarget){
+            if(bookTitle=== searchTarget){
                 return mid;
             }
             else if(bookTitle< searchTarget){
@@ -39,7 +39,7 @@ const SearchBar=()=>{
 
     return (
         <form onSubmit={handleSearch} className="search-bar">
-            <input type="text" ref={searchInputRef} value={seachTerm} onChange={(e)=> setSearchTerm(e.target.value)} placeholder="search books..." className="search-input" />
+            <input type="text" ref={searchInputRef} value={searchTerm} onChange={(e)=> setSearchTerm(e.target.value)} placeholder="search books..." className="search-input" />
             <button type="submit" className="search-button">Search</button>
         </form>
     )

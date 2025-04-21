@@ -16,7 +16,7 @@ const Pagination =()=>{
                 Prev
             </button>
             <span className="page-info">Page {currentPage} of {totalPages}</span>
-            <button onClick={()=>handlePageChange(currentPage+11)} disabled={currentPage===totalPages} className="page-button">
+            <button onClick={()=>handlePageChange(currentPage+1)} disabled={currentPage===totalPages} className="page-button">
                 Next
             </button>
         </div>

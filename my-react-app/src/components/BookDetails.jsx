@@ -59,7 +59,7 @@ const BookDetails=()=>{
 
                     <ul>
                         {book.authors.map((author)=>(
-                            <li>{author.author.name}</li>
+                            <li key={author.author.key}>{author.author.name}</li>
                         ))}
                     </ul>
                 </div>

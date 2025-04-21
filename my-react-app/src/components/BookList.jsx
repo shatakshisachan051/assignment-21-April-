@@ -26,7 +26,7 @@ const BookList=()=>{
             <SearchBar/>
             <div>
                 {books.map((book)=>(
-                    <BookCard key={book.key}/>
+                    <BookCard key={book.key} book={book}/>
                 ))}
             </div>
             <Pagination/>
